@@ -15,10 +15,10 @@ function NavigationBar() {
   const [index, set_index] = useState(0);
   
   const [routes] = useState([
-    { key: 'schedule',  title: 'Horarios',  icon: 'album' },
-    { key: 'trips',     title: 'Viajes',    icon: 'album' },
-    { key: 'places',    title: 'Lugares',   icon: 'album' },
-    { key: 'buses',     title: 'Combis',    icon: 'album' },
+    { key: 'schedule',  title: 'Horarios',  icon: 'calendar' },
+    { key: 'trips',     title: 'Viajes',    icon: 'road' },
+    { key: 'places',    title: 'Lugares',   icon: 'pin' },
+    { key: 'buses',     title: 'Combis',    icon: 'car' },
   ]);
 
   const render_scene = BottomNavigation.SceneMap({
@@ -30,9 +30,9 @@ function NavigationBar() {
 
   return (
     <BottomNavigation
-      navigationState = {{ index, routes }}
-      onIndexChange = {set_index}
-      renderScene = {render_scene}
+      navigationState={{ index, routes }}
+      onIndexChange={set_index}
+      renderScene={render_scene}
     />
   );
 }
